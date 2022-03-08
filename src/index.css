@@ -1,13 +1,229 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+*{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar{
+    display: none;
+}
+.login{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #000;
+}
+.login > img{
+    max-width: 50%;
+}
+.login > a{
+    padding: 20px;
+    border-radius: 99px;
+    background-color: #1db954;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+}
+.player-body{
+    display: flex;
+}
+.sidebar{
+    height: 100vh;
+    flex:0.2;
+    background-color: #040404;
+    color:white;
+    min-width: 230px;
+    padding: 0 10px;
+}
+.sidebar-logo{
+    margin-right: auto;
+    padding: 10px;
+    height: 70px;
+}
+.body{
+    flex:0.8;
+    background: linear-gradient(rgb(91,87,155), rgba(0,0,0,1));
+    height: 100vh;
+    color:white;
+    padding: 30px;
+    overflow-y: overlay;
+}
+.body-info{
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+}
+.body-info-text{
+    flex:1;
+}
+.body-info-text > h2{
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+.body-info-text > p{
+    font-size: 14px;
+}
+.body-info > img{
+    height: 20vw;
+    margin: 0 20px;
+    box-shadow: 0 4px 60px rgba(0,0,0,0.5);
+}
+.body-songs{
+    margin: 20px -30px;
+}
+.body-icons{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.body-icons > .MuiSvgIcon-root {
+    margin-right: 20px;
+}
+.body-shuffle {
+    font-size: 80px !important;
+    margin: 20px 0 20px 50px;
+}
+.body-shuffle:hover{
+    transition: 100ms transform ease-in;
+    transform: scale(1.08);
+}
+.song-row{
+    margin-left: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    color:white;
+}
+.song-row:hover{
+    cursor:pointer;
+    background-color: black;
+    opacity: 0.8;
+}
+.song-row-info{
+    margin-left: 20px;
+}
+.song-row-info > h1{
+    font-size: 16px;
+}
+.song-row-info > p{
+    font-size: 14px;
+    margin-top: 3px;
+    color:gray;
+}
+.song-row-album{
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+.sidebarOption{
+    color:grey;
+    height: 40px;
+    cursor: pointer;
+    transition: .2s color ease-in;
+    display: flex;
+    align-items: center;
+}
+.sidebarOption:hover{
+    color: white;
+}
+.sidebar-option-icon{
+    padding: 0 10px;
+}
+.sidebar-title{
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 12px;
+}
+.sidebar > hr{
+    border: 1px solid #282828;
+    width: 90%;
+    margin: 10px auto;
+}
+.sidebarOption > p{
+    margin: 10px 0 0 20px;
+    font-size: 14px;
+}
+.footer{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    height: 65px;
+    width: 97%;
+    background-color: #282828;
+    padding: 20px;
+}
+.footer-left{
+    flex:0.3;
+    display: flex;
+    align-items: center;
+    color:white;
+    width: 300px;
+}
+.footer-center{
+    flex:0.4;
+    padding: 0 100px;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 300px;
+}
+.footer-right{
+    flex:0.3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+}
+.footer-album-logo{
+    height: 60px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+}
+.footer-green{
+    color:#1ed15e;
+}
+.footer-song-info > h4{
+    margin-bottom: 5px;
+}
+.footer-song-info p{
+    font-size: 12px;
+    color: grey;
+}
+.footer-icon:hover,
+.footer-green:hover{
+    transition: transform 0.2 ease-in-out;
+    transform: scale(1.2) !important;
+    cursor: pointer;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.header-left{
+    flex: 0.6;
+    min-width: 70px;
+    background-color: white;
+    color: grey;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+.header-left input{
+    border:none;
+    width: 100%;
+}
+.header-right{
+    display: flex;
+    align-items: center;
+}
+.header-right > h4{
+    margin-left: 10px;
+}
+table{
+   display: table;
+   width: 100%;
 }
