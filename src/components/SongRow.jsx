@@ -1,6 +1,6 @@
 function SongRow({ track }) {
   return (
-    <div className="song-row">
+    <div className="song-row" >
         <img className="song-row-album" src={track.album.images[0].url} alt={track.name} />
         <div className="song-row-info">
             <h1>{track.name}</h1>

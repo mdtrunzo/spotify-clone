@@ -1,14 +1,14 @@
 import { useContext } from "react"
 import Header from "./Header"
 import { DataLayerContext } from '.././context/DataLayer'
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import PlayCircleFilledIcon from '@mui/icons-material/PlayCircleFilled';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import SongRow from "./SongRow";
 
 function Body({ spotify }) {
-  const [{discover_weekly}] = useContext(DataLayerContext)
+  const [{discover_weekly}, dispatch] = useContext(DataLayerContext)
+  console.log(discover_weekly)
   return (
     <div className="body">
       <Header spotify={spotify}/>
@@ -25,7 +25,7 @@ function Body({ spotify }) {
       <div className="body-songs">
         <div className="body-icons">
           <PlayCircleFilledIcon className="body-shuffle footer-green"/>
-          <FavoriteIcon fontSize="large"/>
+          <FavoriteIcon fontSize="large" className="footer-green"/>
           <MoreHorizIcon />
         </div>
 
